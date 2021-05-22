@@ -45,54 +45,50 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
-                            <form id="reserveForm">
-                                <div class="row form-group">
-                                    <label class="col-sm-6 form-label">
-                                        Number of Campers
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <label class="col-sm-6 form-label">
+                                    Number of Campers
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option>Select...</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="date">Date</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="date" id="date" name="date"
+                                        placeholder="Choose a Date" />
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="" class="col-sm-6 col-form-label">Campsite Type</label>
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active btn-success" for="tent-site">
+                                        <input type="radio" name="siteType" id="tent-site" autocomplete="off" checked>
+                                        Tent
                                     </label>
-                                    <div class="col">
-                                        <select class="form-control" name="numCampers" id="numCampers">
-                                            <option>Select...</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                        </select>
-                                    </div>
+                                    <label class="btn btn-primary" for="rv-site">
+                                        <input type="radio" name="siteType" id="rv-site" autocomplete="off"> RV
+                                    </label>
                                 </div>
-                                <div class="row form-group">
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="date">Date</label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-control" type="date" id="date" name="date"
-                                            placeholder="Choose a Date" />
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button data-dismiss="modal" class="btn btn-secondary" type="submit">Cancel</button>
+                                    <button class="btn btn-primary" type="submit">Search</button>
                                 </div>
-                                <div class="row form-group">
-                                    <label for="" class="col-sm-6 col-form-label">Campsite Type</label>
-                                    <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-secondary active btn-success" for="tent-site">
-                                            <input type="radio" name="siteType" id="tent-site" autocomplete="off"
-                                                checked>
-                                            Tent
-                                        </label>
-                                        <label class="btn btn-primary" for="rv-site">
-                                            <input type="radio" name="siteType" id="rv-site" autocomplete="off"> RV
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <button data-dismiss="modal" class="btn btn-primary"
-                                            type="submit">Cancel</button>
-                                        <button class="btn btn-primary" type="submit">Search</button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -200,6 +196,9 @@
                             </div>
                         </div>
                     </div>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
                 </div>
                 <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -300,6 +299,7 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>
